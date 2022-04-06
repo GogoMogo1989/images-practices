@@ -9,7 +9,8 @@ const port = 9000
 const pathFrontend = path.join(`${__dirname}/../frontend`)
 
 app.use(express.json()) //EZ mindig kell a post metódushoz!!!!!!!!!!!
-app.use('/public', express.static(`${pathFrontend}/public`));
+app.use('/public', express.static(`${pathFrontend}/..frontend/public`));
+app.use('/dist', express.static(`${pathFrontend}/..frontend/dist`));
 
 
 
